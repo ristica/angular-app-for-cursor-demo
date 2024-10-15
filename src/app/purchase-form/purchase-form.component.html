@@ -1,0 +1,18 @@
+<h3>Purchase this Photo:</h3>
+<table>
+    <tr>
+        <td>Price:</td>
+        <td>{{ price() | currency }}</td>
+    </tr>
+    <tr>
+        <td>Shipping &amp; handling:</td>
+        <td>{{ shipping() | currency }}</td>
+    </tr>
+    <tr>
+        <td>Order total:</td>
+        <td>{{ total() | currency }}</td>
+    </tr>
+</table>
+<footer>
+    <button>Place your order</button>
+</footer>

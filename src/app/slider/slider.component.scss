@@ -1,0 +1,102 @@
+:host {
+    border: solid 2px black;
+    display: block;
+    margin: 0.5em auto;
+    padding: 0.25em;
+    max-width: 50em;;
+}
+  
+.image {
+    aspect-ratio: 3 / 2;
+    display: grid;
+    overflow: hidden;
+    place-items: center;
+    position: relative;
+  
+    app-share {
+        grid-column: 1;
+        grid-row: 1;
+        position: relative;
+        
+        img {
+            display: block;
+            width: 100%;
+        }
+  
+    }
+  
+    app-photo-details {
+        grid-column: 1;
+        grid-row: 1;
+        inset: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+  
+}
+  
+nav {
+    background: black;
+    display: flex;
+    margin-top: 0.125em;
+  
+    &::before {
+        background: white;
+        content: '';
+        width: 0.125em;
+    }
+  
+}
+  
+nav button {
+    all: unset;
+    color: white;
+    flex: 1;
+    padding: 1em;
+    transition: background-color 250ms, color 250ms;
+    text-align: center;
+  
+    &:first-child {
+        order: -1;
+    }
+  
+    &:not([disabled]) {
+        cursor: pointer;
+    }
+  
+    &:not([disabled]):hover {
+        background-color: rgb(white, 0.2);
+    }
+  
+    &[disabled] {
+        color: #444;
+    }
+  
+}
+  
+.credits {
+    color: #999;
+    font-size: 85%;
+    padding: 1em 0;
+    text-align: center;
+}
+  
+.preload {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+  
+h3 {
+    margin: 1.5em 1em 0.375em;
+    font-size: 1em;
+    padding-inline-start: 0.5em;
+}
+  
+address {
+    font-size: 80%;
+    font-style: normal;
+    margin: 0 1rem 1rem;
+    padding-inline-start: 0.5rem;
+}
+  

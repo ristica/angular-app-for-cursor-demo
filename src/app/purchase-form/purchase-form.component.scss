@@ -1,0 +1,60 @@
+:host {
+    display: block;
+    padding: 0.5em;
+}
+  
+h3 {
+    margin: 0.5em 0 0.375em;
+    font-size: 1em;
+}
+
+table {
+    border-collapse: collapse;
+    margin-inline-start: auto;
+    width: 50%;
+
+td {
+    padding: 0.25em 0;
+    font-size: 75%;
+
+    &:last-child {
+        text-align: end;
+    }
+
+}
+
+tr:last-of-type {
+
+    td {
+        font-weight: bold;
+        font-size: 120%;
+    }
+
+}
+
+}
+
+footer {
+    text-align: end;
+    padding-block: 0.5em 0;
+}
+
+button {
+    all: unset;
+    background-color: #ff495d;
+    border-radius: 0.75em;
+    color: white;
+    cursor: pointer;
+    flex: 1;
+    font-size: 85%;
+    padding: 0.75em 0;
+    transition: opacity 250ms;
+    text-align: center;
+    width: 50%;
+
+    &:hover {
+        opacity: 0.8;
+    }
+  
+}
+  

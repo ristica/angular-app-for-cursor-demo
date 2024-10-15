@@ -1,0 +1,15 @@
+<button
+    (click)="this.modal.open(portal)"
+    title="Photo Details"
+    class="share">
+    <em>i</em>
+    <span class="visually-hidden">Photo Details</span>
+</button>
+<ng-template cdkPortal #portal="cdkPortal">
+    <div class="image-modal">
+        <div>
+            <img [src]="'/assets/' + image().id + '.jpg'" [attr.alt]="image().description" />
+        </div>
+        <app-purchase-form [price]="image().price"></app-purchase-form>
+    </div>
+</ng-template>

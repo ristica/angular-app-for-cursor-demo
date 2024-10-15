@@ -1,0 +1,78 @@
+.share {
+    all: unset;
+    background: black;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    mix-blend-mode: multiply;
+    inset: 0.5em 0.5em auto auto;
+    opacity: 0.7;
+    padding: 0.75em;
+    position: absolute;
+    transition: opacity 0.2s;
+  
+    svg {
+        display: block;
+        fill: currentColor;
+    }
+  
+    &:hover {
+        mix-blend-mode: normal;
+        opacity: 1;
+    }
+  
+}
+  
+.message {
+    background: rgba(black, 0.7);
+    display: grid;
+    inset: 0;
+    place-items: center;
+    position: absolute;
+  
+    .shield {
+        inset: 0;
+        position: absolute;
+    }
+  
+    .content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 85%;
+        z-index: 1;
+    }
+  
+    input,
+    button {
+        font-size: 120%;
+    }
+  
+    input {
+        background: rgba(white, 0.25);
+        border: solid 1px white;
+        color: white;
+        display: block;
+        margin-bottom: 0.75em;
+        padding: 0.5em;
+        width: 100%;
+    }
+  
+    button {
+        all: unset;
+        background: #ff495d;
+        color: white;
+        cursor: pointer;
+        padding: 0.5em 1.75em;
+        text-align: center;
+        transition: opacity 0.2s;
+    
+        &:hover {
+            opacity: 0.7;
+        }
+  
+    }
+  
+}
+  

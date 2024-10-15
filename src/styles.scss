@@ -1,1 +1,120 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/cdk';
+@include cdk.text-field-autosize;
+@import '@angular/cdk/overlay-prebuilt.css';
+
+.cdk-overlay-container {
+    display: flex;
+    align-items: center;
+    padding: 3em;
+
+    [dir] {
+        display: contents;
+    }
+
+}
+
+.cdk-overlay-pane {
+    background: white;
+    inset-inline-start: 50%;
+    max-width: 50em;
+    padding: 1em;
+    translate: -50% 0;
+    width: calc(100% - 6em);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+a {
+  color: #3dc0d1;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  left: 0;
+}

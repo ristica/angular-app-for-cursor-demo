@@ -1,0 +1,103 @@
+<div
+    [@.disabled]="animationDisabled()"
+    [@slideToggle]="{
+        value: selectedImageId(),
+        params: {
+            leaveEnd: animationDirection() === 'right' ? '100%' : '-100%',
+            enterStart: animationDirection() === 'right' ? '-100%' : '100%',
+            hiddenScale: 0.25
+        }
+    }"
+    (@slideToggle.start)="animationEvent('start')"
+    (@slideToggle.done)="animationEvent('done')"
+    class="image">
+    @for (image of images; track image.id) {
+        @if (image.id === selectedImageId()) {
+            <app-share
+                [message]="image.shareMessage + ': ' + image.shareLink">
+                <img [src]="'/assets/' + image.id + '.jpg'" [attr.alt]="image.description" />
+            </app-share>
+            <app-photo-details [image]="image"></app-photo-details>
+        }
+    }
+</div>
+
+@if (!isAnonymous && images.length > 1 && accountType === 'paid') {
+    <nav>
+        <button
+            (click)="previous()" 
+            [disabled]="selectedImageId() === 1">
+            Previous Image
+        </button>
+        <button 
+            (click)="next()"
+            [disabled]="selectedImageId() === 4">
+            Next Image
+        </button>
+    </nav>
+}
+
+<ng-template #imageTmp let-image>
+    <img [src]="'/assets/' + image + '.jpg'" />
+</ng-template>
+
+<div class="credits">
+    Photos courtesy of <a href="https://gratisography.com">Gratisography</a>
+</div>
+
+<app-description-form [imageDescription]="selectedImage().description"></app-description-form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ng-template #imageTmp let-image>
+    <img [src]="'/assets/' + image + '.jpg'" />
+</ng-template>
+<div class="preload">
+    @for(img of [1,2,3,4];track img) {
+        <ng-container *ngTemplateOutlet="imageTmp; context: { $implicit: img }"></ng-container>
+    }
+</div>
+

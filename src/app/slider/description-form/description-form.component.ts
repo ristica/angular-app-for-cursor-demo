@@ -15,7 +15,7 @@ import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 })
 export class DescriptionFormComponent {
     imageDescription = input<string | null>();
-    protected description = new FormControl<string>('');
+    protected description = new FormControl<string | undefined>(undefined);
 
     constructor() {
         effect(() => {
